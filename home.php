@@ -34,7 +34,7 @@
            <?php
          if(isset($_GET['page'])){
              switch($_GET['page']){
-                 default:include("")
+                 default:include("page/rent.php");break;
              }
          }else{
           header('location: ?page=rent');
