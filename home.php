@@ -36,11 +36,11 @@
              switch($_GET['page']){
                  case "rent" : include("page/rent.php");break;
                  case "resive" : include("page/resive.php");break;
-                 case "report1" : include("page/rent.php");break;
-                 case "report2" : include("page/rent.php");break;
-                 case "items" : include("page/rent.php");break;
-                 case "member" : include("page/rent.php");break;
-                 case "admin" : include("page/rent.php");break;
+                 case "report1" : include("page/report1.php");break;
+                 case "report2" : include("page/report2.php");break;
+                 case "items" : include("page/items.php");break;
+                 case "member" : include("page/member.php");break;
+                 case "admin" : include("page/admin.php");break;
                  default:include("page/rent.php");break;
              }
          }else{
