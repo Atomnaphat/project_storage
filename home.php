@@ -13,7 +13,7 @@
   </head>
   <body>
 <h1>ยินดีตอนรับ <?php echo $_SESSION['NAME']?>;</h1>
-      <a href="logout.php" class="btn btn-secondary btn-sm"> Logout </a>
+
 
 <div class="container-fluid">
       <div class="row">
@@ -21,9 +21,25 @@
            <br>
          <b>menu</b>
          <hr>
-
+         <a href="?page=rent" class="btn btn-secondary" style="width: 100%">ยืมของ</a><br><br>
+         <a href="?page=resive" class="btn btn-secondary" style="width: 100%">คืนของ</a><br><br>
+         <a href="?page=report1" class="btn btn-secondary" style="width: 100%">รายงานการยืม</a><br><br>
+         <a href="?page=report2" class="btn btn-secondary" style="width: 100%">รายงานการคืน</a><br><br>
+         <a href="?page=items" class="btn btn-secondary" style="width: 100%">จัดการของ</a><br><br>
+         <a href="?page=member" class="btn btn-secondary" style="width: 100%">สมาชิก</a><br><br>
+         <a href="?page=admin" class="btn btn-secondary" style="width: 100%">แอดมิน</a><br><br>
+         <a href="logout.php" class="btn btn-secondary btn-sm" style="width: 100%"> Logout </a>
            </div>
      <div class="col-sm-9">
+           <?php
+         if(isset($_GET['page'])){
+             switch($_GET['page']){
+                 default:include("")
+             }
+         }else{
+          header('location: ?page=rent');
+         }
+           ?>
 
            </div>
      </div>
