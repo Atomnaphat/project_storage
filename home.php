@@ -34,6 +34,13 @@
            <?php
          if(isset($_GET['page'])){
              switch($_GET['page']){
+                 case "rent" : include("page/rent.php");break;
+                 case "resive" : include("page/resive.php");break;
+                 case "report1" : include("page/rent.php");break;
+                 case "report2" : include("page/rent.php");break;
+                 case "items" : include("page/rent.php");break;
+                 case "member" : include("page/rent.php");break;
+                 case "admin" : include("page/rent.php");break;
                  default:include("page/rent.php");break;
              }
          }else{

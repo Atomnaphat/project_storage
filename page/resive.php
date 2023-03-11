@@ -6,6 +6,6 @@
 </head>
 
 <body>
-    <h1>rent</h1>
+    <h1>คืนของ</h1>
 </body>
 </html>
