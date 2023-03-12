@@ -7,14 +7,6 @@ if(isset($_POST['save'])){
     $sql="insert into admin (admin_id,admin_name,admin_login,admin_password)values('$id','$name','$login','$pass')";
     mysqli_query($conn,$sql);
 }
-if(isset($_POST['edit'])){
-    $id = $_GET['edit'];
-    $name = $POST['name'];
-    $login = $POST['login'];
-    $pass=$_POST['pass'];
-    $sql = "update admin set admin_name='$name',admin_login='$login',admin_password = '$pass' where admin_id = '$id'";
-    mysqli_query($conn,$sql);
-}
 ?>
 <!doctype html>
 <html>
@@ -22,8 +14,6 @@ if(isset($_POST['edit'])){
 <meta charset="urf-8">
 <title>Untitled Document</title>
 </head>
-
-
 <body>
     <h1>จัดการแอดมิน</h1>
     <div class="row">
@@ -41,41 +31,14 @@ if(isset($_POST['edit'])){
             <input type="submit" class="btn btn-primary" name="save" value="add">
         </form>
         <!--/////-->
-
-
-
-
-
-
-
-         <!----edit-->
-         <?php
-         $id =$_GET['edit'];
-         $sql2 = "select * from admin where admin_id = '$id'";
-         $result2 = mysqli_query($conn,$sql2);
-         $row2 = mysqli_fetch_array($result2);
-         //print_r($row2);
-         ?>
-        <b>แก้ไข</b><hr>
-        <form method="post">
-            <label>name</label>
-        <input type="text" class ="form-control" name="name" value="<?php echo $row2['admin_name'];?>">
-            <label>login</label>
-        <input type="text" class ="form-control" name="login" value="<?php echo $row2['admin_login'];?>">
-            <label>pass</label>
-        <input type="text" class ="form-control" name="pass" value="<?php echo $row2['admin_password'];?>">
-            <br>
-            <input type="submit" class="btn btn-warning" name="edit" value="edit">
-        </form>
-        <!--/////-->
           <!----del-->
-          <?php
+        <?php
          $id =$_GET['del'];
          $sql2 = "select * from admin where admin_id = '$id'";
          $result2 = mysqli_query($conn,$sql2);
          $row2 = mysqli_fetch_array($result2);
          //print_r($row2);
-         ?>
+        ?>
           <b>ลบ</b><hr>
           <b>คุณต้องการลบ <?php echo $row2['admin_name'];?> หรือไม่</b>
         <form method="post">
@@ -95,7 +58,6 @@ if(isset($_POST['edit'])){
              <td>name</td>
              <td>login</td>
              <td>del</td>
-             <td>edit</td>
              </thead>
             <?php
              $sql="select * from admin order by admin_name asc";
@@ -110,16 +72,10 @@ if(isset($_POST['edit'])){
                  <td>
                      <a href="?page=admin&del=<?php echo $row['admin_id'];?>"class="btn btn-danger btn-sm">ลบ</a>
                  </td>
-                 <tb>
-                     <a href="?page=admin&edit=<?php echo $row['admin_id'];?>"class="btn btn-warning btn-sm">แก้ไข</a>
-                 </tb>
              </tr>
-
-
              <?php } ?>
          </table>
-        <!--/////-->
-        </div>
+         <!--/////-->
     </div>
 </body>
 </html>
