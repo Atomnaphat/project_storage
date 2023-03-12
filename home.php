@@ -12,7 +12,7 @@
     <title>storage_items</title>
   </head>
   <body>
-<h1>หน้าที่จัดการทุกอย่างในชีวิต</h1>
+<h1>หน้าที่คุณจะต้องจัดการทุกอย่างในชีวิตของคุณนะครับ</h1>
 
 
 <div class="container-fluid">
