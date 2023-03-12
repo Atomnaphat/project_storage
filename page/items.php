@@ -1,3 +1,5 @@
+<?php
+?>
 <!doctype html>
 <html>
 <head>
@@ -20,7 +22,7 @@
     <label>img</label>
         <input type="text" class="form-control" name="img">
         <br>
-        <input type="submit" class="">
+        <input type="submit" class="btn btn-primary" name="save">
     </from>
     <!--from edit-->
     <!--from del-->
@@ -46,7 +48,7 @@
        <td><a href="?del=<?php echo $row['items_id'];?>" class="btn btn-sm btn-danger">ลบ</a></td>
        <td><a href="?edit=<?php echo $row['items_id'];?>" class="btn btn-sm btn-warning">แก้ไข</a></td>
        </tr>
-       <?php}?>
+       <?php }?>
        </table>
     </div>
     </div>
